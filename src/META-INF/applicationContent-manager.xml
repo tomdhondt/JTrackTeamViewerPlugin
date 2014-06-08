@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 	"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+ 	<bean id="customFieldManager" class="be.jtrackteamviewerplugin.service.manager.CustomFieldManager">
+ 	</bean>
+ 	<bean id="teamViewerManager" class="be.jtrackteamviewerplugin.service.manager.TeamViewerManager">
+ 	</bean>
+ 	<bean id="partnerManager" class="be.jtrackteamviewerplugin.service.manager.PartnerManager">
+ 	</bean>
+ 	<bean id="teamViewerConnectionManager" class="be.jtrackteamviewerplugin.service.manager.TeamViewerConnectionManager">
+ 	</bean>
+ 	<bean id="teamViewerConnectionMetaDataManager" class="be.jtrackteamviewerplugin.service.manager.TeamViewerConnectionMetaDataManager">
+ 	</bean>
+</beans>

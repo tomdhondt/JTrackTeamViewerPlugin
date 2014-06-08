@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 	"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="teamViewerMapper" class="be.jtrackteamviewerplugin.service.mapper.TeamViewerMapper">
+ 	</bean>
+ 	<bean id="teamViewerConnectionMapper" class="be.jtrackteamviewerplugin.service.mapper.TeamViewerConnectionMapper">
+ 	</bean>
+ 	<bean id="teamViewerQualityMapper" class="be.jtrackteamviewerplugin.service.mapper.TeamViewerQualityMapper">
+ 	</bean>
+ 	<bean id="teamViewerModeMapper" class="be.jtrackteamviewerplugin.service.mapper.TeamViewerModeMapper">
+ 	</bean>
+ 	<bean id="teamViewerConnectionMetaDataMapper" class="be.jtrackteamviewerplugin.service.mapper.TeamViewerConnectionMetaDataMapper">
+ 	</bean>
+ 	<bean id="customFieldMapper" class="be.jtrackteamviewerplugin.service.mapper.CustomFieldMapper">
+ 	</bean>
+ 	<bean id="partnerMapper" class="be.jtrackteamviewerplugin.service.mapper.PartnerMapper">
+ 	</bean>
+</beans>

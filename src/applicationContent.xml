@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 	"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- imports across the application -->
+	<import resource="META-INF/applicationContent-JPAA.xml"/>
+	<import resource="META-INF/applicationContent-TEST.xml"/>
+	<import resource="META-INF/applicationContent-mapper.xml"/>
+	<import resource="META-INF/applicationContent-manager.xml"/>
+</beans>

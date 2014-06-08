@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 	"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="teamViewerConnectionObject01" class="be.jtrackteamviewerplugin.business.bean.TeamViewerConnection">
+		<property name="UniqueID" value="{2ff485a9-cf1d-4168-be45-211bffd7854}"/>
+		<property name="notes" value="teamViewerConnectionObject01 notes"/>
+		<property name="isDeleted" value="false"/>
+		<property name="price" value="10.0000"/>
+		<property name="Hash" value="19530964"/>
+		<property name="Bill" value="true"/>
+		<property name="teamViewer" ref="teamViewerObject01"/>
+	</bean>
+	<bean id="teamViewerConnectionObject02" class="be.jtrackteamviewerplugin.business.bean.TeamViewerConnection">
+		<property name="UniqueID" value="{3dd485a9-cf1d-4168-be45-211bffd7896}"/>
+		<property name="notes" value="teamViewerConnectionObject02 notes"/>
+		<property name="isDeleted" value="false"/>
+		<property name="price" value="10.0000"/>
+		<property name="Hash" value="19530964"/>
+		<property name="Bill" value="true"/>
+		<property name="teamViewer" ref="teamViewerObject01"/>
+	</bean>
+	<bean id="partnerObject01" class="be.jtrackteamviewerplugin.business.bean.Partner">
+		<property name="uniqueID" value="{0a1b5230-533a-4777-9f5f-efdf02d5735n}"/>
+		<property name="Name" value="tom d'hondt"/>
+		<property name="Notes" value="notes"/>
+		<property name="IsDeleted" value="false"/>
+		<property name="IsFavorite" value="false"/>
+		<property name="PartnerGroup_ID" value="0"/>
+		<property name="BasicCharge" value="0.0000"/>
+		<property name="Currency" value="0"/>
+		<property name="HourlyRate" value="50.0000"/>
+		<property name="Inherit" value="0"/>
+	</bean>
+	<bean id="teamViewerModeObject01" class="be.jtrackteamviewerplugin.business.bean.TeamViewerMode">
+		<property name="uniqueID" value="{2ff485a9-cf1d-4168-be45-211bffd7845}"/>
+		<property name="Name" value="Windows RDP"/>
+		<property name="Notes" value="notes Windows RDP"/>
+		<property name="SamName" value="WindowsRDP"/>
+	</bean>
+	<bean id="teamViewerQualityObject01" class="be.jtrackteamviewerplugin.business.bean.TeamViewerQuality">
+		<property name="uniqueID" value="{2ff485a9-cf1d-4168-be45-211bffd7896}"/>
+		<property name="name" value="Highest"/>
+		<property name="notes" value="Sky is the limit"/>
+		<property name="samName" value="Sky"/>
+	</bean>
+	<bean id="customFieldObject01" class="be.jtrackteamviewerplugin.business.bean.CustomField">
+		<property name="uniqueID" value="{2ff485a9-cf1d-4168-be45-211bffd7896}"/>
+		<property name="value" value="CustomField Value"/>
+		<property name="type" value="23"/>
+		<property name="partnerID" value="321"/>
+	</bean>
+	<bean id="teamViewerObject01" class="be.jtrackteamviewerplugin.business.bean.TeamViewer">
+		<property name="uniqueID" value="{2ff485a9-cf1d-4168-be45-211bffd5896}"/>
+		<property name="address" value="123135143"/>
+		<property name="password" value="7BD2E2544581638A1A0CD541AA97AE0F5DA88B8539234535430CAC2FD84AFADE15CC632699E6F361"/>
+		<property name="teamViewerMode" ref="teamViewerModeObject01"/>
+		<property name="teamViewerQuality" ref="teamViewerQualityObject01"/>
+		<property name="partner" ref="partnerObject01"/>
+	</bean>
+	<bean id="teamViewerConnectionMetaDataObject01" class="be.jtrackteamviewerplugin.business.bean.TeamViewerConnectionMetaData">
+		<property name="customField" ref="customFieldObject01"/>
+		<property name="value" value="01 meta data about the teamviewer connection"/>
+		<property name="teamViewerConnection" ref="teamViewerConnectionObject01"/>
+	</bean>
+	<bean id="teamViewerConnectionMetaDataObject02" class="be.jtrackteamviewerplugin.business.bean.TeamViewerConnectionMetaData">
+		<property name="customField" ref="customFieldObject01"/>
+		<property name="value" value="02 meta data about the teamviewer connection"/>
+		<property name="teamViewerConnection" ref="teamViewerConnectionObject01"/>
+	</bean>
+	<!--  -->
+	<!-- Test DTO Spring instances -->
+	<!--  -->
+	<bean id="teamViewerModeDTO01" class="be.jtrackteamviewerplugin.service.dto.TeamViewerModeDTO">
+		<property name="uniqueID" value="{2ff485a9-cf1d-4168-be45-211bffd7845}"/>
+		<property name="Name" value="Windows RDP"/>
+		<property name="Notes" value="notes Windows RDP"/>
+		<property name="SamName" value="WindowsRDP"/>
+	</bean>
+	<bean id="teamViewerQualityDTO01" class="be.jtrackteamviewerplugin.service.dto.TeamViewerQualityDTO">
+		<property name="uniqueID" value="{2ff485a9-cf1d-4168-be45-211bffd7896}"/>
+		<property name="name" value="Highest"/>
+		<property name="notes" value="Sky is the limit"/>
+		<property name="samName" value="Sky"/>
+	</bean>
+	<bean id="partnerDTO01" class="be.jtrackteamviewerplugin.service.dto.PartnerDTO">
+		<property name="uniqueID" value="{0a1b5230-533a-4777-9f5f-efdf02d5735n}"/>
+		<property name="Name" value="tom d'hondt"/>
+		<property name="Notes" value="notes"/>
+		<property name="IsDeleted" value="false"/>
+		<property name="IsFavorite" value="false"/>
+		<property name="PartnerGroup_ID" value="0"/>
+		<property name="BasicCharge" value="0.0000"/>
+		<property name="Currency" value="0"/>
+		<property name="HourlyRate" value="50.0000"/>
+		<property name="Inherit" value="0"/>
+	</bean>
+	<bean id="teamViewerDTO01" class="be.jtrackteamviewerplugin.service.dto.TeamViewerDTO">
+		<property name="uniqueID" value="{2ff485a9-cf1d-4168-be45-211bffd5896}"/>
+		<property name="address" value="123135143"/>
+		<property name="password" value="7BD2E2544581638A1A0CD541AA97AE0F5DA88B8539234535430CAC2FD84AFADE15CC632699E6F361"/>
+		<property name="teamViewerModeID" value="1"/>
+		<property name="teamViewerModeName" value="test"/>
+		<property name="teamViewerQualityID" value="1"/>
+		<property name="teamViewerQualityName" value="test"/>
+		<property name="partnerID" value="1"/>
+		<property name="partnerName" value="partnername test"/>
+	</bean>
+	<bean id="teamViewerConnectionDTO01" class="be.jtrackteamviewerplugin.service.dto.TeamViewerConnectionDTO">
+		<property name="UniqueID" value="{2ff485a9-cf1d-4168-be45-211bffd7854}"/>
+		<property name="notes" value="notes"/>
+		<property name="isDeleted" value="false"/>
+		<property name="price" value="10.0000"/>
+		<property name="Hash" value="19530964"/>
+		<property name="Bill" value="true"/>
+	</bean>
+	<bean id="customFieldDTO01" class="be.jtrackteamviewerplugin.service.dto.CustomFieldDTO">
+		<property name="uniqueID" value="{2ff485a9-cf1d-4168-be45-211bffd7854}"/>
+		<property name="value" value="test"/>
+		<property name="type" value="23"/>
+		<property name="partnerID" value="321"/>
+	</bean>
+	<bean id="teamViewerConnectionMetaDataDTO01" class="be.jtrackteamviewerplugin.service.dto.TeamViewerConnectionMetaDataDTO">
+		<property name="uniqueID" value="{2ff485a9-cf1d-4168-be45-211bffd7547}"/>
+		<!-- <property name="customFieldDTO" value="customFieldDTO01"/> -->
+		<property name="value" value="value"/>
+		<property name="teamViewerConnectionID" value="123"/>
+		<property name="teamViewerConnectionWindowsUser" value="Tom.Dhondt"/>
+	</bean>
+</beans>
