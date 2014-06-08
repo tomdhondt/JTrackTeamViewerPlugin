@@ -3,8 +3,8 @@ package be.jtrackteamviewerplugin.business.data;
 import java.util.Collections;
 import java.util.List;
 
-import main.java.info.jtrac.exception.JTrackException;
-import main.java.info.jtrac.exception.data.DataDAOException;
+import be.jtrackteamviewerplugin.business.bean.NameQueryParam;
+import be.jtrackteamviewerplugin.exception.data.DataDAOException;
 
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
@@ -17,7 +17,7 @@ public abstract class AbstractDAOImpl<T> implements IPersistenceDAOImpl<T>{
 	 */
 	protected SessionFactory sessionFactory;
 	protected Class<T> type;
-	private Logger logger = Logger.getLogger(JTrackException.class);
+	private Logger logger = Logger.getRootLogger();
     /**
 	 * Default constructor for the Class
 	 */
@@ -50,7 +50,11 @@ public abstract class AbstractDAOImpl<T> implements IPersistenceDAOImpl<T>{
 				Query q = this.sessionFactory.getCurrentSession().getNamedQuery(namedQuery);
 				Collections.sort(list);
 				for(NameQueryParam nQp : list){
-					q.setString(nQp.getVarName(), nQp.getValue());
+					if(nQp.getValue() instanceof String){
+						q.setString(nQp.getVarName(), (String) nQp.getValue());	
+					}else if(nQp.getValue() instanceof Integer){
+						q.setInteger(nQp.getVarName(), (Integer) nQp.getValue());	
+					}
 				}
 				result = q.list();
 				this.sessionFactory.getCurrentSession().getTransaction().commit();			
@@ -97,7 +101,11 @@ public abstract class AbstractDAOImpl<T> implements IPersistenceDAOImpl<T>{
 				Query q = this.sessionFactory.getCurrentSession().getNamedQuery(namedQuery);
 				Collections.sort(list);
 				for(NameQueryParam nQp : list){
-					q.setString(nQp.getVarName(), nQp.getValue());
+					if(nQp.getValue() instanceof String){
+						q.setString(nQp.getVarName(), (String) nQp.getValue());	
+					}else if(nQp.getValue() instanceof Integer){
+						q.setInteger(nQp.getVarName(), (Integer) nQp.getValue());	
+					}
 				}
 				if(count <= 0){
 					q.setMaxResults(1);
